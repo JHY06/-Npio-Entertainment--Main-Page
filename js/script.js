@@ -133,3 +133,34 @@ window.onclick = function (event) {
         iframe4.src = "";
     }
 };
+// 비파인드
+function openPopup(popupId) {
+    const popup = document.getElementById(popupId);
+    const videoFrame = document.getElementById(`video-frame${popupId.charAt(popupId.length - 1)}`);
+    const thumbnail = document.querySelector(`img[data-video][onclick*="${popupId}"]`);
+
+    if (thumbnail) {
+        const videoSrc = thumbnail.dataset.video;
+        videoFrame.src = videoSrc.replace("watch?v=", "embed/"); // Convert to embed URL
+    }
+
+    popup.style.display = "flex"; // Show popup
+}
+
+function closePopup(popupId) {
+    const popup = document.getElementById(popupId);
+    const videoFrame = document.getElementById(`video-frame${popupId.charAt(popupId.length - 1)}`);
+
+    videoFrame.src = ""; // Stop the video
+    popup.style.display = "none"; // Hide popup
+}
+
+// Close popup when clicking outside of the iframe
+window.onclick = function (event) {
+    const popups = document.getElementsByClassName("popup");
+    for (let popup of popups) {
+        if (event.target == popup) {
+            closePopup(popup.id);
+        }
+    }
+};
