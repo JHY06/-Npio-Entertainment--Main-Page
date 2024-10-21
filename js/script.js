@@ -11,31 +11,82 @@ const visualSlide = new Swiper(".visual-slide", {
         el: ".swiper-pagination",
     },
 });
-const artistSwiper = new Swiper(".artist-swiper", {
-    // Optional parameters
-    loop: true,
-    autoplay: true,
-    speed: 1000,
-    slidesPerView: 5,
+// Swiper 초기화 함수
+function initializeArtistSwiper() {
+    const artistSwiper = new Swiper(".artist-swiper", {
+        // Optional parameters
+        loop: true,
+        autoplay: true,
+        speed: 1000,
+        spaceBetween: 16,
 
-    // If we need pagination
-    pagination: {
-        el: ".swiper-pagination",
-    },
+        slidesPerView: getSlidesPerView(), // 초기 slidesPerView 설정
+
+        // If we need pagination
+        pagination: {
+            el: ".swiper-pagination",
+        },
+    });
+
+    return artistSwiper;
+}
+
+// 화면 크기에 맞게 slidesPerView 값을 계산하는 함수
+function getSlidesPerView() {
+    const windowWidth = window.innerWidth;
+
+    if (windowWidth >= 1325) {
+        return 5; // 1325px 이상일 때 5개
+    } else if (windowWidth >= 770) {
+        return 3; // 770px ~ 1324px 사이일 때 3개
+    } else {
+        return 1; // 770px 이하일 때 1개
+    }
+}
+
+// Swiper 초기화
+let artistSwiper = initializeArtistSwiper();
+
+// 화면 크기 변경 시 Swiper 업데이트
+window.addEventListener("resize", function () {
+    const newSlidesPerView = getSlidesPerView();
+
+    // 슬라이드 수가 변경되면 Swiper 업데이트
+    artistSwiper.params.slidesPerView = newSlidesPerView;
+    artistSwiper.update(); // Swiper 업데이트
 });
 
 // new production 슬라이드
-const swiper = new Swiper(".newproduction-slide", {
-    slidesPerView: 6, // You can adjust this to show more slides
-    spaceBetween: 10, // Adjust space between slides
-    speed: 1000,
-    autoplay: true,
-    loop: true, // Enable infinite loop
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-});
+const updateSwiper = () => {
+    const screenWidth = window.innerWidth;
+    let slidesPerView;
+
+    if (screenWidth <= 490) {
+        slidesPerView = 2; // 490px 이하
+    } else if (screenWidth <= 770) {
+        slidesPerView = 3; // 770px 이하
+    } else if (screenWidth <= 1325) {
+        slidesPerView = 4; // 1325px 이하
+    } else {
+        slidesPerView = 6; // 기본값
+    }
+
+    const swiper = new Swiper(".newproduction-slide", {
+        slidesPerView: slidesPerView,
+        spaceBetween: 10,
+        speed: 1000,
+        autoplay: true,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+};
+
+// 페이지 로드 시 및 창 크기 조정 시 스와이퍼 업데이트
+window.addEventListener("load", updateSwiper);
+window.addEventListener("resize", updateSwiper);
 
 // 모달 recent news
 // Modal 1
@@ -183,4 +234,15 @@ function changePage(pageNumber) {
         }
     });
 }
-// prdocut name
+//gnb
+// 햄버거 메뉴 클릭 시 gnb 메뉴 토글
+document.querySelector(".hamburger-menu").addEventListener("click", function () {
+    document.querySelector(".gnb").classList.toggle("active");
+});
+
+// 각 네비게이션 항목 클릭 시 메뉴를 닫고 페이지로 이동
+document.querySelectorAll(".gnb ul li a").forEach(function (menuItem) {
+    menuItem.addEventListener("click", function () {
+        document.querySelector(".gnb").classList.remove("active");
+    });
+});
