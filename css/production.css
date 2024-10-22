@@ -106,7 +106,7 @@ section.production ul {
     position: absolute;
     bottom: -2px;
     left: 0px;
-    width: 93%;
+    width: 100%;
     /* right: 100px; */
     background: rgba(0, 0, 0, 0.8);
     color: white;
