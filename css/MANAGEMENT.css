@@ -52,14 +52,19 @@ h1.text {
 }
 /* Managemanet Card */
 .Mange-card {
+    /* width: 400px; */
+    /* height: 450px; */
     width: 400px;
-    height: 450px;
-    border: 1px solid #000;
+    /* height: 371px; */
+    border: 2px solid #000;
 }
-
-.Mange-card img {
+.Mange-card figure {
     width: 400px;
     height: 371px;
+}
+.Mange-card img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 .Mange-card a {

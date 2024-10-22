@@ -173,7 +173,7 @@ hr {
 
 .product-item img {
     width: 100%; /* Ensure images fill their container's width */
-    height: 300px; /* Maintain aspect ratio */
+    height: 300px;
     /* border-radius: 5px; */
     /* border: 1px solid #000; */
     /* border-radius: 50px; */
