@@ -367,4 +367,8 @@ h1.text {
     .footer-copyright {
         font-size: 10px;
     }
+    .product-drama {
+        font-weight: 700;
+        font-size: 15px;
+    }
 }

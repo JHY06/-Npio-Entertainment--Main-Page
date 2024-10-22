@@ -370,4 +370,8 @@ section.production ul {
         font-weight: 600;
         font-size: 20px;
     }
+    .product-drama {
+        font-weight: 700;
+        font-size: 15px;
+    }
 }
