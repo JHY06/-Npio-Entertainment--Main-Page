@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
 
 body {
     font: 1rem/1.6 "Pretendard" !important;
@@ -653,7 +654,7 @@ h3 {
         height: 200px;
     }
     .logo {
-        width: 50px;
+        width: 80px;
     }
 
     .card {
@@ -685,6 +686,9 @@ h3 {
         font-size: 14px; /* Adjust font size for notice text */
         padding: 0 10px;
         font: 1rem/1.6 "Pretendard";
+    }
+    .footer-copyright {
+        font-size: 10px;
     }
 }
 .notice-news .textv {

@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/reset.css" />
         <link rel="stylesheet" href="css/Goods.css" />
         <!-- <link rel="stylesheet" href="css/common.css" /> -->
         <title>Document</title>
@@ -23,6 +24,11 @@
                         <li><a href="Goods.html" class="active">GOODS SHOP</a></li>
                     </ul>
                 </nav>
+                <div class="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </header>
         <div class="inner">
@@ -182,4 +188,18 @@
             </div>
         </footer>
     </body>
+    <script>
+        //gnb
+        // 햄버거 메뉴 클릭 시 gnb 메뉴 토글
+        document.querySelector(".hamburger-menu").addEventListener("click", function () {
+            document.querySelector(".gnb").classList.toggle("active");
+        });
+
+        // 각 네비게이션 항목 클릭 시 메뉴를 닫고 페이지로 이동
+        document.querySelectorAll(".gnb ul li a").forEach(function (menuItem) {
+            menuItem.addEventListener("click", function () {
+                document.querySelector(".gnb").classList.remove("active");
+            });
+        });
+    </script>
 </html>
