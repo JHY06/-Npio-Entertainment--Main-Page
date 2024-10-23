@@ -44,6 +44,7 @@ body {
 }
 h1.text {
     font-weight: 700;
+    padding: 10px;
 }
 .text {
     margin-top: 70px;
