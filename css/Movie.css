@@ -340,6 +340,16 @@ section.production ul {
         top: 20px;
         right: 20px;
     }
+    .gnb.active {
+        display: block; /* 햄버거 메뉴 클릭 시 네비게이션 보이기 */
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.8); /* Optional: Make the background slightly transparent */
+        width: 100%;
+        text-align: center;
+        backdrop-filter: blur(10px); /* Adjust the blur value as needed */
+    }
 }
 
 @media (max-width: 490px) {

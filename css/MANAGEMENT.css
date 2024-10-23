@@ -145,6 +145,16 @@ h1.text {
     height: 3px;
     background-color: #333;
 }
+.gnb.active {
+    display: block; /* 햄버거 메뉴 클릭 시 네비게이션 보이기 */
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: Make the background slightly transparent */
+    width: 100%;
+    text-align: center;
+    backdrop-filter: blur(10px); /* Adjust the blur value as needed */
+}
 @media (max-width: 1325px) {
     .inner {
         width: 100%;
@@ -244,14 +254,14 @@ h1.text {
     }
 
     .gnb.active {
-        display: block;
+        display: block; /* 햄버거 메뉴 클릭 시 네비게이션 보이기 */
         position: absolute;
-        top: 110px;
+        top: 70px;
         right: 0;
-        background-color: #fff;
+        background-color: rgba(255, 255, 255, 0.8); /* Optional: Make the background slightly transparent */
         width: 100%;
         text-align: center;
-        z-index: 9998;
+        backdrop-filter: blur(10px); /* Adjust the blur value as needed */
     }
 }
 @media (max-width: 490px) {
