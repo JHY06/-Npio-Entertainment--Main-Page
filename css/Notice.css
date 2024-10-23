@@ -63,7 +63,7 @@ h1.text {
     display: flex;
     flex-wrap: wrap;
     gap: 20px; /* Space between the items */
-    margin-bottom: 225px;
+    /* margin-bottom: 225px; */
 }
 
 .notice {
@@ -149,6 +149,33 @@ h1.text {
     width: 100%;
     height: 3px;
     background-color: #333;
+}
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.pagination-item {
+    margin: 0 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 225px;
+}
+
+.pagination-item:hover {
+    background-color: #d0d0d0;
+}
+
+.pagination-item.active {
+    background-color: #000;
+    color: white;
 }
 @media (max-width: 1325px) {
     .inner {
