@@ -91,7 +91,7 @@ h1.text {
 }
 
 .management-card {
-    /* flex: 0 1 calc(33.333% - 20px); */
+    flex: 0 1 calc(33.333% - 20px);
     box-sizing: border-box; /* 패딩, 보더 포함 */
     margin-bottom: 20px; /* 카드 아래쪽 간격 */
     margin: 0 auto;
@@ -262,6 +262,19 @@ h1.text {
         width: 100%;
         text-align: center;
         backdrop-filter: blur(10px); /* Adjust the blur value as needed */
+    }
+    .management-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        margin-bottom: 225px;
+    }
+
+    .management-card {
+        flex: 0 1 100%; /* Makes the card take full width */
+        box-sizing: border-box;
+        margin-bottom: 20px;
     }
 }
 @media (max-width: 490px) {
