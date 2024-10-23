@@ -690,6 +690,12 @@ h3 {
     .footer-copyright {
         font-size: 10px;
     }
+    .footer-sns img {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+        padding: 5px;
+    }
 }
 .notice-news .textv {
     font-size: 10px;

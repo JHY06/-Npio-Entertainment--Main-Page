@@ -368,4 +368,10 @@ h1.text {
         font-weight: 700;
         font-size: 15px;
     }
+    .footer-sns img {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+        padding: 5px;
+    }
 }

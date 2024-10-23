@@ -307,4 +307,10 @@ h1.text {
     .notice {
         flex: 1 1 70%;
     }
+    .footer-sns img {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+        padding: 5px;
+    }
 }
