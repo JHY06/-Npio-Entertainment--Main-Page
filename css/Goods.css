@@ -36,7 +36,7 @@ h1.text {
     padding: 5px;
 }
 .gnb li a.active {
-    /* border-bottom: 3px solid #000; */
+    border-bottom: 3px solid #000;
     color: #000;
 }
 .gnb li a:hover {
@@ -271,7 +271,7 @@ hr {
 @media (max-width: 1325px) {
     .inner {
         width: 100%;
-        padding: 20px;
+        /* padding: 20px; */
     }
     .logo {
         width: 70px;

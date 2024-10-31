@@ -46,7 +46,7 @@ h1.text {
     padding: 5px;
 }
 .gnb li a.active {
-    /* border-bottom: 3px solid #000; */
+    border-bottom: 3px solid #000;
     color: #000;
 }
 .gnb li a:hover {

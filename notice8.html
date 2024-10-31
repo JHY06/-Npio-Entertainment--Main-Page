@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/notice8.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="inner">
+                <h1 class="logo">
+                    <a href="index.html">
+                        <img src="img/logo.svg" alt="NPIC Entertainment" />
+                    </a>
+                </h1>
+                <nav class="gnb">
+                    <ul>
+                        <li><a href="MANAGEMENT.html">MANAGEMENT</a></li>
+                        <li><a href="PRODUCTION.html">PRODUCTION</a></li>
+                        <li><a href="Notice.html" class="active">NOTICE</a></li>
+                        <li><a href="Goods.html">GOODS SHOP</a></li>
+                    </ul>
+                </nav>
+                <div class="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="inner">
+                <section class="notice">
+                    <h2>[공지] 초상권 무단 사용</h2>
+                    <div class="notice-date">2024-08-10</div>
+                    <hr />
+                    <div class="notice-content">
+                        <p>안녕하세요. 앤피오엔터테인먼트입니다.</p>
+                        <p>
+                            최근 당사 소속 배우의 초상권을 무단으로 사용하여 경제적 이득을 취하고, 개인적으로 촬영한
+                            사진을 판매하거나 상업적으로 재가공 하는 등의 부정 사례가 다수 확인되고 있습니다.
+                        </p>
+                        <p>
+                            당사는 지속적인 자체 모니터링으로 소속 배우의 초상권 보호에 힘쓰고 있습니다. 팬 여러분 역시
+                            위와 같은 부정 행위를 발견하신 경우 office@npioe.com 으로 제보 바랍니다.
+                        </p>
+                        <p>감사합니다.<br />앤피오엔터테인먼트 드림</p>
+                    </div>
+                    <div class="notice-button">
+                        <a href="Notice.html">
+                            <div class="list">LIST</div>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <div class="inner">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <a href="#"><img src="img/logo.svg" alt="Company Logo" /></a>
+                    </div>
+                    <div class="footer-sns">
+                        <a href="https://m.post.naver.com/npiopr" target="_blank"><img src="img/sns3.png" alt="" /></a>
+                        <a href="https://www.youtube.com/@npioentertainment" target="_blank"
+                            ><img src="img/sns2.png" alt=""
+                        /></a>
+                        <a href="https://x.com/npioENT" target="_blank"><img src="img/sns4.png" alt="" /></a>
+                    </div>
+                    <div class="footer-copyright">
+                        <p>#B-2001, 338, Hakdong-ro, Gangnam-gu, Seoul, Korea</p>
+                        <p>서울시 강남구 학동로 338 강남파라곤 B동 2001호</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script>
+            //gnb
+            // 햄버거 메뉴 클릭 시 gnb 메뉴 토글
+            document.querySelector(".hamburger-menu").addEventListener("click", function () {
+                document.querySelector(".gnb").classList.toggle("active");
+            });
+
+            // 각 네비게이션 항목 클릭 시 메뉴를 닫고 페이지로 이동
+            document.querySelectorAll(".gnb ul li a").forEach(function (menuItem) {
+                menuItem.addEventListener("click", function () {
+                    document.querySelector(".gnb").classList.remove("active");
+                });
+            });
+        </script>
+    </body>
+</html>
