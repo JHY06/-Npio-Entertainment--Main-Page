@@ -234,6 +234,42 @@ hr {
 }
 .footer-logo img {
     margin-bottom: 15px;
+    .header .inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        /* margin-bottom: 80px; */
+    }
+    .gnb {
+        display: block;
+        display: flex;
+        /* margin-bottom: 190px; */
+    }
+
+    .gnb ul {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+    }
+    h1.text {
+        font-weight: 700;
+    }
+    .gnb li a {
+        text-decoration: none;
+        /* color: #514343; */
+        color: #000;
+        font-weight: 700;
+        padding: 5px;
+    }
+    .gnb li a.active {
+        border-bottom: 3px solid #000;
+        color: #000;
+    }
+    .gnb li a:hover {
+        /* border-bottom: 3px solid #000; */
+        color: #000;
+    }
 }
 .footer-copyright {
     text-align: center;
