@@ -187,7 +187,7 @@ hr {
 
     .notice-content {
         width: 100%;
-        padding: 5px; /* Add padding on left and right */
+        /* padding: 5px;  */
     }
 
     .logo {
@@ -298,9 +298,53 @@ hr {
     }
     .notice-content {
         width: 100%;
-        padding: 5px; /* Add padding on left and right */
+        /* padding: 10px;  */
     }
     .notice-content p {
         font-size: 15px;
+        /* padding: 7px 13px; */
+    }
+}
+.notice {
+    margin-bottom: 10vw;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.notice-content {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+.notice-content p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media (max-width: 1325px) {
+    .notice-content {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 770px) {
+    .notice-content p {
+        font-size: 25px;
+        padding: 0;
+    }
+}
+
+@media (max-width: 490px) {
+    .notice-content {
+        padding: 0 10px;
+    }
+
+    .notice-content p {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 15px;
     }
 }

@@ -157,6 +157,7 @@ h1.text {
 .profile-info h2 {
     font-size: 32px;
     margin-bottom: 5px;
+    text-align: center;
 }
 
 .eng-name {
@@ -438,7 +439,7 @@ h1.text {
     .profile-header {
         margin: 0px;
         padding: 0px;
-        padding-left: 85px;
+        padding-left: 38px;
         margin-bottom: 20px;
     }
 }
