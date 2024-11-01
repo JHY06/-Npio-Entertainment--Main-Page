@@ -736,6 +736,10 @@ h3 {
         color: #fff;
         cursor: pointer;
     }
+    .artist-swiper {
+        width: 375px;
+        height: 400px;
+    }
 
     /* iFrame styling for responsiveness */
 }
