@@ -739,6 +739,7 @@ h3 {
     .artist-swiper {
         width: 375px;
         height: 400px;
+        padding: 0 10px 10px;
     }
 
     /* iFrame styling for responsiveness */
